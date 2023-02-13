@@ -1,0 +1,32 @@
+React.js es una biblioteca de codigo abierto que nos permite crear interfaces de usuario.
+
+Biblioteca: las bibliotecas son codigo ya creado para un fin especifico, por ejemplo un codigo que ya existe para hacer animaciones que podemos implementar en nuesto codigo.
+
+VENTAJAS DE REACT: 
+    - FACIL DE APRENDER
+    - COMPONENTES REUTILIZABLES
+    - CREAR APLICACIONES DINAMICAS
+    - BUEN DESEMPEÑO 
+
+DINAMICA: Normalmente observamos que cuando hacemos un cambio, este se ve reflejado en todo el documento o vemos reinicios de la web. Con react, pasamps de tener una web estatica a tener que una web dinamica que solo se enfoca en modificar ese componente o funcion sin necesidad de tener que modificar el resto de la aplicacion
+
+
+------------------------------ CONCEPTOS BASICOS  --------------------------------
+
+COMPONENTES: Los componentes de react, son la parte del codigo que ya cumple una funcion, por ejemplo, un componente seria una barra de navegacion y basicamente react, funciona con componentes. estos componentes los podemos usar cuatas veces queramos en nuestro codigo y el independiente del resto del codigo y de otros componentes
+
+---- Los componentes de dividen en dos clases: --
+    
+    - Funcionales:
+        Un componente funcional es simplemente una funcion de Javascript 
+        que definimos, esta funcion nos retorna una funcion de React .(JSX)
+        --- CARACTERISTICAS ----
+        - Debe retornar un elemento JSX
+        - El nombre de la funcion debe empezar con MAYUSCULA // function Saludo () { }
+        - Puede recibir valores si es necesario // function Saludo (props) { }
+
+        props = "Propiedades": son argumentos que puede recibir un componente de react
+        Podemos crear componentes dentro de componentes, y para hacer dinamicos estos componentes, podemos utlizar los props para recibir valores dinamicos en nuetra aplicacion
+
+
+    - De clase:
