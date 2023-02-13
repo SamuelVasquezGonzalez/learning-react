@@ -8,25 +8,53 @@ VENTAJAS DE REACT:
     - CREAR APLICACIONES DINAMICAS
     - BUEN DESEMPEÑO 
 
-DINAMICA: Normalmente observamos que cuando hacemos un cambio, este se ve reflejado en todo el documento o vemos reinicios de la web. Con react, pasamps de tener una web estatica a tener que una web dinamica que solo se enfoca en modificar ese componente o funcion sin necesidad de tener que modificar el resto de la aplicacion
+DINAMICA: Normalmente observamos que cuando hacemos un cambio, este se ve reflejado en todo el documento o vemos reinicios de la web. Con react, pasamos de tener una web estatica a tener que una web dinamica que solo se enfoca en modificar ese componente o funcion sin necesidad de tener que modificar el resto de la aplicacion
 
 
 ------------------------------ CONCEPTOS BASICOS  --------------------------------
 
-COMPONENTES: Los componentes de react, son la parte del codigo que ya cumple una funcion, por ejemplo, un componente seria una barra de navegacion y basicamente react, funciona con componentes. estos componentes los podemos usar cuatas veces queramos en nuestro codigo y el independiente del resto del codigo y de otros componentes
+COMPONENTES: Los componentes de react, son la parte del codigo que ya cumple una funcion, por ejemplo, un componente seria una barra de navegacion, y basicamente react, funciona con componentes. estos componentes los podemos usar cuatas veces queramos en nuestro codigo y es independiente del resto del codigo y de otros componentes
 
 ---- Los componentes de dividen en dos clases: --
     
     - Funcionales:
         Un componente funcional es simplemente una funcion de Javascript 
-        que definimos, esta funcion nos retorna una funcion de React .(JSX)
+        que definimos, esta funcion nos retorna un elemento de React .(JSX)
         --- CARACTERISTICAS ----
         - Debe retornar un elemento JSX
         - El nombre de la funcion debe empezar con MAYUSCULA // function Saludo () { }
         - Puede recibir valores si es necesario // function Saludo (props) { }
 
         props = "Propiedades": son argumentos que puede recibir un componente de react
-        Podemos crear componentes dentro de componentes, y para hacer dinamicos estos componentes, podemos utlizar los props para recibir valores dinamicos en nuetra aplicacion
+        Podemos crear componentes dentro de componentes, y para hacer dinamicos estos componentes, podemos utlizar los props para recibir valores dinamicos en nuetra aplicacion.
+        Los props, solo pueden ser enviados de padre a hijo ( COMPONENTE A (PADRE) => COMPONENTE B (HIJO) )
 
 
     - De clase:
+        Un componente de clase es basicamente los mismo que un componente funcional, la diferencia es que su sintaxis es un poco mas elaborada, en los componentes funcionales se trabaja con funciones, en los componentes de clase se traban con clases.
+        Tambien siempre nos retornara un elemento JSX.
+        ----- CARACTERISTICAS -----
+        - Debe extender Reac.Component.
+        - Debe tener un metodo render() para poder retornar el elemento a la vista.
+        - Puede recibir valores si es necesario
+
+
+ESTADO: El estado, es la representacion en Javascript del conjunto de propiedades de un componente y sus valores actuales, por ejemplo, lo que esta mostrando es ese momento un componenete y su valor y sus propiedades, recodermos que estos valores pueden cambiar si lo necesitamos y cuando estos cambian y ya quedan definidos, ese tambien seria su estado. UN EJEMPLO SERIA UN CONTADOR DE CLICKS
+
+----- ¿Por qué componentes funcionales y de clase? --------
+    Anteriormente, trabajabamos con componentes de clase para poder trabajar con los "estados" de nuestros componentes.
+    Luego vinieron los Hooks,
+
+    --- Los hooks ---
+    Los hooks nos permiten agregarle un cierto estado a nuestros componentes funcionales. Le estan agregando esa funcionalidad que le faltaba a los compone funcionales.
+    Gracias a los hooks si le podemos asignar y actualizar un estado a los componentes funcionales en React con los hooks
+
+    Los hooks son una funcion especial que nos permite trabajar con estados en los componentes funcionales y otros aspectos en react. La ventaja es que es mucho mas facil de escribir y de entender que en un componente de clase
+
+Event Listener/Event Handler: Los eventListener/eventHandler son una funcion que nos permite escuchar eventos que suceden en nuestra aplicacion y eventos especificos. Se la asignamos a un elemento de nuestra aplicacion. por ejemplo, cuando queremos que un boton haga algo especifico
+
+JSX: JSX es una extencion de React para la sintaxis de Javascript y combina Javascript con html. Los archivos de react llevan la extencion jsx (Javascript xml)
+    VENTAJAS:
+    - Su estructura es mas facil de visualizar
+    - Tiene errores y advertencias mas utiles
+    - JSX Es opcional, hay otras altenartivas

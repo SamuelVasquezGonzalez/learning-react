@@ -1,0 +1,75 @@
+-------- ELEMENTOS EN JSX ------------
+Elementos: Los elementos son la unidad mas pequeña de react que define lo que se ve en la pantalla
+Los componentes en React estan hechos de elementos
+
+El DOM DE REACT:
+    EL DOM de React es un paquete que facilita la interaccion y actualizacion del DOM en aplicaciones de React
+    DOM (Document Objet Model)
+    EL DOM Es la representacion en el navegador de todos los elementos que conformar una pagina o una aplicacion web. Es como un arbol invertido que representa la jerarquia de los elementos en una pagina web y el React DOM nos permite tener esa interaccion con el DOM mas facilmente
+
+Para diferenciar un elemento de un componente, es tan facil como mirar su etiqueta. si su etiqueta de declara en minuscula, es un elemento HTML y de un color diferente. Los componentes que definimos, inicia con mayuscula 
+    Elemento: <div className=elementoHTML></div>
+    Componente <Boton></boton>
+
+    En JSX podemos utlizar los atributos que utilizabamos en nuestros elementos HTML. Pero, algunos atributos se escriben diferente si los comparamos con HTML. Por ejemplo:
+    En html = class = " "
+    En JSX = className = " "
+    
+    En html = for = " "
+    En JSX = htmlFor = " "
+
+    el atributo "style" puede aceptar un objeto de Javascript con propiedades css escritas en camelCase:
+    const estilos = {
+        backgrouImage: ' ',
+        fontFamily: ' ',
+    };
+    Y para asignarlo a un elemento, llamamos al atributo y entre llaves colocamos la variable <div style{ estilos }></div>
+
+
+                    ------------------------ TODOS LOS ATRIBUTOS DEL DOM ACEPTADOS POR REACT -------------------------
+                                accept acceptCharset accessKey action allowFullScreen alt async autoComplete
+                                autoFocus autoPlay capture cellPadding cellSpacing challenge charSet checked
+                                cite classID className colSpan cols content contentEditable contextMenu controls
+                                controlsList coords crossOrigin data dateTime default defer dir disabled
+                                download draggable encType form formAction formEncType formMethod formNoValidate
+                                formTarget frameBorder headers height hidden high href hrefLang htmlFor
+                                httpEquiv icon id inputMode integrity is keyParams keyType kind label lang list
+                                loop low manifest marginHeight marginWidth max maxLength media mediaGroup method
+                                min minLength multiple muted name noValidate nonce open optimum pattern
+                                placeholder poster preload profile radioGroup readOnly rel required reversed
+                                role rowSpan rows sandbox scope scoped scrolling seamless selected shape size
+                                sizes span spellCheck src srcDoc srcLang srcSet start step style summary
+                                tabIndex target title type useMap value width wmode wrap
+
+    
+----------- ESTRUCTURA DE UN COMPONENTE ------------
+Al igual que en HTML, los elementos pueden ser aninados unos 
+dentro de otros en JSX para crear estrucuras mas complejas.
+
+Una vez que definimos la estructura de nuestro componente, 
+hay que renderizarlo para poder tener su vista en la pantalla,
+para pode renderizar todo nuestro documento, debemos tener un Elemento
+padre que va a ser el contenedor de toda nuestra aplicacion, este contenedor
+debe tener un identificador unico por ejemplo id= ' root '
+
+Para meter nuestros elementos dentro de nuestro contenedor padre, hay varios metodos, uno de ellos es
+ReactDom.render() y este en codigo se veria asi
+
+    //Importamos el paquete de react-dom
+    import ReactDom from 'react-fom');
+
+    //creamos y defimimos nuestros elementos
+    const contenedorPadre = <div id='root'></div>
+    const elemento = <h1> ¡Hola, Mundo! </h1>
+
+
+    // React.render() Recibe dos o mas parametros, el primer parametro es el elemento que queremos meter en el contenedor.
+                            el segundo parametro es el contenedor en el que meteremos nuestro elemento
+    ReactDom.render(
+        // Como primer parametro
+        elemento,
+        document.getElementById('root')
+    );
+    --- self-closing-tag ----
+    el sef-closing-tag con las etiquetas que se abren y ya no pueden contener ni texto ni otros elementos
+    por ejemplo la etiqueta <img src="">
