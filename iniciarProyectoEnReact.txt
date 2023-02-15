@@ -1,0 +1,18 @@
+------------- INICIAR UN PROYECTO -------------
+Para Iniciar la creacion de nuestros proyectos es react, 
+empezamos con un comando en la terminal.
+
+
+    npx-react-create-app el-nombre-de-mi-app
+    //Para crear la app en una carpeta que hemos creado nosotros ejecutamos lo siguente
+    npx-react-create-app .
+
+
+Una vez acabe de crear y de instalar todo lo necesario,
+y ya podremos empezar a tirar codigo, React nos proporsionara
+una serie de comandos que podremos utilizar en nuestra terminal 
+
+    - npm start
+        Para empezar un servidor de desarrollo (Para iniciar nuestra aplicacion)
+
+    - 

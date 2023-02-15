@@ -56,7 +56,7 @@ Para meter nuestros elementos dentro de nuestro contenedor padre, hay varios met
 ReactDom.render() y este en codigo se veria asi
 
     //Importamos el paquete de react-dom
-    import ReactDom from 'react-fom');
+    import ReactDom from 'react-dom');
 
     //creamos y defimimos nuestros elementos
     const contenedorPadre = <div id='root'></div>
@@ -73,3 +73,8 @@ ReactDom.render() y este en codigo se veria asi
     --- self-closing-tag ----
     el sef-closing-tag con las etiquetas que se abren y ya no pueden contener ni texto ni otros elementos
     por ejemplo la etiqueta <img src="">
+
+    Javascript en JSX, para agregar Javascript a nuestro codigo, debemos meter el coldigo dentro de llaves, ya sea el codigo o algo que nos retorne algo. EJEMPLO:
+
+    let adjetivo = "Interesante";
+    <p>React es {adjetivo}</p>
